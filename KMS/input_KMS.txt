@@ -1,0 +1,47 @@
+//--------KMS INPUT PARAMETERS---------
+verboseMode=true
+dbIpAddress=172.18.0.1:3307
+//---------------> SOUTH
+sthIpAddress=192.168.1.243
+kpsIpAddress=192.168.1.75
+sthPort=54100
+kpsPort=54101
+// Save type chooses the format to save the key material (0-ASCII, 1-B64)
+saveType=1
+// Number of keys to request
+numKeys=100
+// Type of keys requested (0 - Symmetric, 1 - Oblivious)
+keyType=1
+// Size of the keys requested (n elements of given type, i.e 50 base64 chars)
+keyChunkSize=64
+etsiSource=KMS
+etsiDest=KPS
+// not used yet:
+maxBps=0
+minBps=0
+jitter=0
+priority=0
+timeout=0
+ttl=0
+metaMimetype=JSON
+//---------------> NORTH
+nthIpAddress=127.0.0.1
+appIpAddress=127.0.0.1
+nthPort=54002
+appPort=54003
+//
+etsiSource=APP
+etsiDest=KMS
+// not used yet:
+maxBps=0
+minBps=0
+jitter=0
+priority=0
+timeout=0
+ttl=0
+metaMimetype=JSON
+//---------------> SYNC
+syncAipAddress=127.0.0.1
+syncBipAddress=127.0.0.1
+syncAport=54004
+syncBport=54005
